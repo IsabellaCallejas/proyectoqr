@@ -2,7 +2,7 @@ let qrCode;
 let data;
 
 function preload() {
-  partyConnect("wss://demos.p5.party", "mi-proyecto", "main");
+  partyConnect("wss://demos.p5.party", "proyectoqr", "main");
   data = partyLoadShared("data");
 }
 
@@ -26,7 +26,7 @@ function updateQRCode() {
   qrContainer.innerHTML = '';
   
   // El texto o URL que contendrá el nuevo código QR.
-  let qrUrl = "https://isabellacallejas.github.io/proyectoqr//scan/" + data.scanCount;
+  let qrUrl = "https://isabellacallejas.github.io/proyectoqr/" + data.scanCount;
   
   // Genera el nuevo código QR en el contenedor.
   qrCode = new QRCode(qrContainer, {
@@ -42,6 +42,6 @@ function updateQRCode() {
   const scanDisplay = document.createElement('h1');
   scanDisplay.innerText = `Este es el escaneo número ${data.scanCount}`;
   qrContainer.prepend(scanDisplay);
-
 }
+
 
