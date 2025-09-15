@@ -2,7 +2,7 @@ let qrCode;
 let data;
 
 function preload() {
-  partyConnect("wss://deepstream-server-1.com", "mi-proyecto", "main");
+  partyConnect("wss://demos.p5.party", "mi-proyecto", "main");
   data = partyLoadShared("data");
 }
 
@@ -44,3 +44,4 @@ function updateQRCode() {
   qrContainer.prepend(scanDisplay);
 
 }
+
